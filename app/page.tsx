@@ -60,7 +60,8 @@ export default function Home() {
           <p className="eyebrow">ACM Student Chapter &middot; Bennett University presents</p>
           <div className="hero__lockup">
             <h1 className="sr-only">Drink Derive Code</h1>
-            <img className="hero__roman" src="/assets/roman-iii.png" alt="Drink Derive Code III" />
+            <img className="hero__glow" src="/assets/ddc-logo.svg" alt="" aria-hidden="true" />
+            <img className="hero__roman" src="/assets/ddc-logo.svg" alt="Drink Derive Code III" />
           </div>
           <Countdown target="2026-10-29T10:00:00+05:30" />
           <div className="actions">
