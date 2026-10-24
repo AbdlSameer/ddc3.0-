@@ -250,7 +250,6 @@ a:hover {
   z-index: 1;
   width: clamp(260px, 42vw, 520px);
   height: auto;
-  filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000);
 }
 
 .sr-only {
@@ -443,8 +442,7 @@ body:not(.intro-open) .hero__lockup {
 }
 
 body:not(.intro-open) .hero__roman {
-  filter: brightness(0);
-  animation: logoReveal 2.5s .5s ease-out both, logoFlicker 10s 3.5s ease-in-out infinite;
+  animation: hero3dIn .7s .7s cubic-bezier(.2, .7, .3, 1) forwards;
 }
 
 body:not(.intro-open) .hero__glow {

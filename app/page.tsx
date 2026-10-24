@@ -61,7 +61,9 @@ export default function Home() {
           <div className="hero__lockup">
             <h1 className="sr-only">Drink Derive Code</h1>
             <img className="hero__glow" src="/assets/ddc-logo.svg" alt="" aria-hidden="true" />
-            <img className="hero__roman" src="/assets/ddc-logo.svg" alt="Drink Derive Code III" />
+            <video className="hero__roman" autoPlay muted playsInline aria-label="Drink Derive Code III">
+              <source src="/assets/ddc-logo-anim.webm" type="video/webm" />
+            </video>
           </div>
           <Countdown target="2026-10-29T10:00:00+05:30" />
           <div className="actions">
