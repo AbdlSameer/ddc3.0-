@@ -400,8 +400,7 @@ body:not(.intro-open) .hero__content>*:nth-child(4) {
 }
 
 body:not(.intro-open) .hero__roman {
-  animation: romanReveal 2.5s .5s ease-out forwards;
-  filter: brightness(0);
+  animation: romanReveal 2.5s .5s ease-out both;
 }
 
 body:not(.intro-open) .hero__lockup {
