@@ -168,7 +168,7 @@ export default function Intro() {
       <div className="intro__s2" ref={s2Ref}>
         <img className="intro__s2-img" src="/assets/hero-bg.png" alt="" />
         <div className="intro__s2-shade" aria-hidden="true" />
-        <p className="intro__title">DDC<span>&rsquo;</span>26</p>
+        <p className="intro__title">DDC<span>.</span>3.0</p>
         <div className="intro__words">
           <span className="intro__word intro__word--1" ref={word1Ref}>DRINK</span>
           <span className="intro__word intro__word--2" ref={word2Ref}>DERIVE</span>
