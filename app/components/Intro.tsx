@@ -179,7 +179,6 @@ export default function Intro() {
       <div className="intro__flash" ref={flashRef} />
       <div className="intro__scan" aria-hidden="true" />
       <div className="intro__controls">
-        <button className="intro__btn" type="button" onClick={() => playRef.current(true)}>Sound on</button>
         <button className="intro__btn" type="button" onClick={() => finishRef.current()}>Skip intro</button>
       </div>
     </div>

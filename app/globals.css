@@ -350,44 +350,17 @@ a:hover {
 }
 
 @keyframes neonFlicker {
-  0%, 8% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(0 0 18px rgba(255, 51, 204, .8)) drop-shadow(0 0 40px rgba(255, 179, 71, .5));
+  0%, 8%, 11%, 13%, 52%, 56%, 58%, 82%, 86%, 88%, 100% {
+    filter: drop-shadow(0 0 18px rgba(255, 51, 204, .8)) drop-shadow(0 0 40px rgba(255, 179, 71, .5));
   }
-  10% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(0 0 2px rgba(255, 51, 204, .1));
+  10%, 12% {
+    filter: drop-shadow(0 0 4px rgba(255, 51, 204, .15)) drop-shadow(0 0 6px rgba(255, 179, 71, .1));
   }
-  11% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(0 0 18px rgba(255, 51, 204, .8)) drop-shadow(0 0 40px rgba(255, 179, 71, .5));
+  55%, 85% {
+    filter: drop-shadow(0 0 3px rgba(255, 51, 204, .1)) drop-shadow(0 0 5px rgba(255, 179, 71, .08));
   }
-  12% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(0 0 1px rgba(255, 51, 204, .05));
-  }
-  13%, 52% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(0 0 18px rgba(255, 51, 204, .8)) drop-shadow(0 0 40px rgba(255, 179, 71, .5));
-  }
-  55% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(0 0 1px rgba(255, 51, 204, .05));
-  }
-  56% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(0 0 28px rgba(255, 51, 204, 1)) drop-shadow(0 0 55px rgba(255, 179, 71, .8));
-  }
-  57% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000);
-  }
-  58%, 82% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(0 0 18px rgba(255, 51, 204, .8)) drop-shadow(0 0 40px rgba(255, 179, 71, .5));
-  }
-  85% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(0 0 1px rgba(255, 51, 204, .05));
-  }
-  86% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(0 0 18px rgba(255, 51, 204, .8)) drop-shadow(0 0 40px rgba(255, 179, 71, .5));
-  }
-  87% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000);
-  }
-  88%, 100% {
-    filter: drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(0 0 18px rgba(255, 51, 204, .8)) drop-shadow(0 0 40px rgba(255, 179, 71, .5));
+  57%, 87% {
+    filter: drop-shadow(0 0 6px rgba(255, 51, 204, .25)) drop-shadow(0 0 10px rgba(255, 179, 71, .15));
   }
 }
 
@@ -427,8 +400,12 @@ body:not(.intro-open) .hero__content>*:nth-child(4) {
 }
 
 body:not(.intro-open) .hero__roman {
-  animation: romanReveal 2.5s .5s ease-out forwards, neonFlicker 10s 3.2s ease-in-out infinite;
+  animation: romanReveal 2.5s .5s ease-out forwards;
   filter: brightness(0);
+}
+
+body:not(.intro-open) .hero__lockup {
+  animation: neonFlicker 10s 3.2s ease-in-out infinite;
 }
 
 /* GTA-style neon accents */
@@ -1080,14 +1057,47 @@ body:not(.intro-open) .hero__roman {
 }
 
 /* ---------- phones ---------- */
+/* ---------- tablet ---------- */
+@media (max-width: 1024px) {
+  .site-header {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .brand__mark {
+    font-size: 22px;
+  }
+
+  .hero__roman {
+    width: clamp(260px, 50vw, 500px);
+  }
+
+  .hero__content {
+    padding-top: 100px;
+  }
+
+  .heat {
+    padding: 36px 24px;
+    gap: 32px;
+  }
+
+  .mission__rounds {
+    max-height: none;
+    opacity: 1;
+  }
+}
+
+/* ---------- phones ---------- */
 @media (max-width: 640px) {
   html {
     scroll-padding-top: 64px;
   }
 
   .site-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 50;
     flex-wrap: nowrap;
     gap: 12px;
@@ -1095,7 +1105,7 @@ body:not(.intro-open) .hero__roman {
     padding-bottom: 8px;
     padding-left: max(16px, env(safe-area-inset-left, 0px));
     padding-right: max(16px, env(safe-area-inset-right, 0px));
-    background: rgba(14, 11, 20, .9);
+    background: rgba(14, 11, 20, .92);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
@@ -1128,13 +1138,23 @@ body:not(.intro-open) .hero__roman {
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .hero__roman {
+    width: clamp(220px, 75vw, 340px);
   }
 
   .hero__content {
-    padding-top: 28px;
-    padding-bottom: 28px;
-    gap: 16px;
+    padding-top: 72px;
+    padding-bottom: 24px;
+    gap: 14px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__lockup {
+    align-items: center;
   }
 
   .hero__lead {
@@ -1152,21 +1172,24 @@ body:not(.intro-open) .hero__roman {
   }
 
   .countdown__box span {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .countdown__box small {
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 2px;
   }
 
   .actions {
-    gap: 12px;
+    gap: 10px;
+    width: 100%;
   }
 
   .actions .btn {
     flex: 1 1 100%;
     justify-content: center;
+    min-height: 48px;
+    font-size: 13px;
   }
 
   .details__grid {
@@ -1184,16 +1207,20 @@ body:not(.intro-open) .hero__roman {
   }
 
   .details__item strong {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .section {
-    padding-top: 64px;
-    gap: 28px;
+    padding-top: 56px;
+    gap: 24px;
   }
 
   .section__note {
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .h2 {
+    font-size: clamp(32px, 8vw, 48px);
   }
 
   .mission {
@@ -1201,34 +1228,69 @@ body:not(.intro-open) .hero__roman {
   }
 
   .mission__num {
-    font-size: 52px;
+    font-size: 48px;
   }
 
   .mission__title {
-    font-size: 30px;
+    font-size: 26px;
+  }
+
+  .mission__rounds {
+    max-height: none;
+    opacity: 1;
+    flex-direction: row;
+  }
+
+  .mission__rounds .mission__btn {
+    flex: 1;
   }
 
   .heat {
-    padding: 28px 20px;
-    gap: 28px;
+    padding: 24px 18px;
+    gap: 24px;
+  }
+
+  .heat__meter {
+    gap: 8px;
   }
 
   .gcard {
-    width: 62vw;
+    width: 72vw;
   }
 
   .gallery {
-    padding-top: 56px;
-    padding-bottom: 40px;
+    padding-top: 48px;
+    padding-bottom: 36px;
   }
 
   .join__inner {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .join__devs {
+    white-space: normal;
+    font-size: 12px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .footer__brand {
+    justify-content: center;
   }
 
   .footer__brand img {
     height: 32px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
   }
 }
 
@@ -1244,6 +1306,18 @@ body:not(.intro-open) .hero__roman {
 
   .brand__logo {
     height: 26px;
+  }
+
+  .hero__roman {
+    width: 85vw;
+  }
+
+  .countdown__box span {
+    font-size: 24px;
+  }
+
+  .details__grid {
+    grid-template-columns: 1fr;
   }
 }
 
