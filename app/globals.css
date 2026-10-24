@@ -325,40 +325,49 @@ a:hover {
   }
 }
 
-@keyframes romanReveal {
+@keyframes logoReveal {
   0% {
-    opacity: 1;
-    filter: brightness(0) drop-shadow(0 0 3px rgba(255, 51, 204, .4)) drop-shadow(0 0 3px rgba(255, 179, 71, .3));
+    filter: brightness(0) drop-shadow(0 0 2px rgba(255, 51, 204, .3)) drop-shadow(0 0 2px rgba(255, 179, 71, .2));
   }
-
-  15% {
-    opacity: 1;
-    filter: brightness(0) drop-shadow(0 0 10px rgba(255, 51, 204, .7)) drop-shadow(0 0 8px rgba(255, 179, 71, .5));
+  10% {
+    filter: brightness(0) drop-shadow(0 0 6px rgba(255, 51, 204, .6)) drop-shadow(0 0 5px rgba(255, 179, 71, .4));
   }
-
-  30% {
-    opacity: 1;
-    filter: brightness(0) drop-shadow(0 0 25px rgba(255, 51, 204, .9)) drop-shadow(0 0 20px rgba(255, 179, 71, .7));
+  22% {
+    filter: brightness(0) drop-shadow(0 0 16px rgba(255, 51, 204, .9)) drop-shadow(0 0 12px rgba(255, 179, 71, .7));
   }
-
+  35% {
+    filter: brightness(0) drop-shadow(0 0 28px rgba(138, 43, 226, .85)) drop-shadow(0 0 20px rgba(255, 51, 204, .7));
+  }
   50% {
-    opacity: 1;
-    filter: brightness(0.15) drop-shadow(0 0 35px rgba(138, 43, 226, .8)) drop-shadow(0 0 25px rgba(255, 51, 204, .6));
+    filter: brightness(0.12) drop-shadow(0 0 24px rgba(138, 43, 226, .7)) drop-shadow(0 0 16px rgba(255, 51, 204, .5));
   }
-
   65% {
-    opacity: 1;
-    filter: brightness(0.4) drop-shadow(0 0 30px rgba(138, 43, 226, .7)) drop-shadow(0 0 15px rgba(255, 51, 204, .4));
+    filter: brightness(0.35) drop-shadow(0 0 18px rgba(138, 43, 226, .5)) drop-shadow(0 0 10px rgba(255, 51, 204, .3));
   }
-
   80% {
-    opacity: 1;
-    filter: brightness(0.75) drop-shadow(0 0 20px rgba(138, 43, 226, .4));
+    filter: brightness(0.7) drop-shadow(0 0 10px rgba(138, 43, 226, .3));
   }
-
   100% {
-    opacity: 1;
-    filter: brightness(1) drop-shadow(0 0 0px transparent);
+    filter: brightness(1) drop-shadow(2px 2px 0 #000) drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000);
+  }
+}
+
+@keyframes glowReveal {
+  0% {
+    opacity: 0;
+    filter: blur(50px) brightness(2.5) saturate(2);
+  }
+  25% {
+    opacity: .3;
+    filter: blur(40px) brightness(2) saturate(2);
+  }
+  55% {
+    opacity: .55;
+    filter: blur(28px) brightness(1.8) saturate(2);
+  }
+  100% {
+    opacity: .7;
+    filter: blur(18px) brightness(1.5) saturate(2);
   }
 }
 
@@ -418,8 +427,14 @@ body:not(.intro-open) .hero__lockup {
   animation: hero3dIn .7s .7s cubic-bezier(.2, .7, .3, 1) forwards;
 }
 
+body:not(.intro-open) .hero__roman {
+  filter: brightness(0);
+  animation: logoReveal 4s .7s ease-out both;
+}
+
 body:not(.intro-open) .hero__glow {
-  animation: neonFlicker 10s 2s ease-in-out infinite;
+  opacity: 0;
+  animation: glowReveal 3.5s .7s ease-out both, neonFlicker 10s 5s ease-in-out infinite;
 }
 
 /* GTA-style neon accents */
