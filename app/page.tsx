@@ -184,7 +184,7 @@ export default function Home() {
           <h2 className="h2 h2--xl">Find a partner.<br /><span className="accent">Keep your mouth shut.</span></h2>
           <p>Registrations open soon. Teams of two, open to all Bennett students.</p>
           <a href="[REGISTRATION LINK]" className="btn btn--solid">Register now</a>
-          <p className="join__devs">Developed by <strong>Abdul Sameer</strong>, <strong>Ayan Bhoumick</strong> &amp; <strong>Priyanshu Saxena</strong></p>
+          <p className="join__devs">Developed by <strong>Abdul Sameer</strong>, <strong>Priyanshu Saxena</strong> &amp; <strong>Ayan Bhoumick</strong></p>
         </div>
       </section>
 
