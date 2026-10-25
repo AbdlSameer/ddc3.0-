@@ -958,10 +958,6 @@ body:not(.intro-open) .hero__glow {
   animation: drift 70s linear infinite;
 }
 
-.gallery__viewport:hover .gallery__track,
-.gallery__viewport:focus-within .gallery__track {
-  animation-play-state: paused;
-}
 
 @keyframes drift {
   from {
