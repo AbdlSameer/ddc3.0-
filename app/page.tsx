@@ -160,8 +160,8 @@ export default function Home() {
           <h2 className="h2">Backed by the best.</h2>
         </div>
         <div className="sponsors">
-          <img src="/assets/sponsors/burrito-bro.webp" alt="Burrito Bro" className="sponsor__logo" width={1387} height={556} />
-          <img src="/assets/sponsors/renocred.webp" alt="Renocred" className="sponsor__logo" width={878} height={878} />
+          <img src="/assets/sponsors/burrito-bro.webp" alt="Burrito Bro" className="sponsor__logo" width={700} height={985} />
+          <img src="/assets/sponsors/renocred.webp" alt="Renocred" className="sponsor__logo" width={339} height={477} />
         </div>
       </section>
 
