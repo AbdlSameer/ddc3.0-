@@ -54,15 +54,15 @@ export default function Home() {
         <div className="hero__stripes" aria-hidden="true" />
         <div className="hero__skyline" aria-hidden="true">
           {SKYLINE.map((s, i) => (
-            <i key={i} style={{ '--w': s.w, '--h': s.h, '--i': i }} />
+            <i key={i} style={{ '--w': String(s.w), '--h': s.h, '--i': String(i) } as React.CSSProperties} />
           ))}
         </div>
         <div className="hero__content container">
           <p className="eyebrow">ACM Student Chapter &middot; Bennett University presents</p>
           <div className="hero__lockup">
             <h1 className="sr-only">Drink Derive Code</h1>
-            <img className="hero__glow" src="/assets/ddc-logo.svg" alt="" aria-hidden="true" />
-            <img className="hero__roman" src="/assets/ddc-logo.svg" alt="Drink Derive Code III" />
+            <img className="hero__glow" src="/assets/ddc-logo.svg" alt="" aria-hidden="true" width={527} height={433} />
+            <img className="hero__roman" src="/assets/ddc-logo.svg" alt="Drink Derive Code III" width={527} height={433} />
           </div>
           <Countdown target="2026-10-29T18:30:00+05:30" />
           <div className="actions">
@@ -160,8 +160,8 @@ export default function Home() {
           <h2 className="h2">Backed by the best.</h2>
         </div>
         <div className="sponsors">
-          <img src="/assets/sponsors/burrito-bro.svg" alt="Burrito Bro" className="sponsor__logo" />
-          <img src="/assets/sponsors/renocred.svg" alt="Renocred" className="sponsor__logo" />
+          <img src="/assets/sponsors/burrito-bro.webp" alt="Burrito Bro" className="sponsor__logo" width={1387} height={556} />
+          <img src="/assets/sponsors/renocred.webp" alt="Renocred" className="sponsor__logo" width={878} height={878} />
         </div>
       </section>
 
@@ -175,13 +175,13 @@ export default function Home() {
             <div className="gallery__track">
               {GALLERY.map((c, i) => (
                 <figure key={i} className="gcard">
-                  <img src={`/assets/gallery/${c.img}`} alt={c.alt} loading="lazy" />
+                  <img src={`/assets/gallery/${c.img}`} alt={c.alt} />
                   <figcaption><span>{c.label}</span><strong>{c.title}</strong></figcaption>
                 </figure>
               ))}
               {GALLERY.map((c, i) => (
                 <figure key={`dup-${i}`} className="gcard" aria-hidden="true">
-                  <img src={`/assets/gallery/${c.img}`} alt="" loading="lazy" />
+                  <img src={`/assets/gallery/${c.img}`} alt="" />
                   <figcaption><span>{c.label}</span><strong>{c.title}</strong></figcaption>
                 </figure>
               ))}
