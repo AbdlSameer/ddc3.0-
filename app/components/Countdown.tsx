@@ -11,6 +11,8 @@ export default function Countdown({ target }: { target: string }) {
     const t = new Date(target).getTime();
     const pad = (n: number) => String(n).padStart(2, '0');
 
+    let timer: ReturnType<typeof setInterval>;
+
     const tick = () => {
       let left = isNaN(t) ? 0 : Math.max(0, t - Date.now());
       const d = Math.floor(left / 86400000); left -= d * 86400000;
@@ -25,7 +27,7 @@ export default function Countdown({ target }: { target: string }) {
     };
 
     tick();
-    const timer = setInterval(tick, 1000);
+    timer = setInterval(tick, 1000);
     return () => clearInterval(timer);
   }, [target]);
 

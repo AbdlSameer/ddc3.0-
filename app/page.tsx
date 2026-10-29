@@ -10,16 +10,17 @@ const SKYLINE = [
 ];
 
 const GALLERY = [
-  { img: 'bennett.jpg', alt: 'Bennett University', label: 'Where it goes down', title: 'Bennett University' },
-  { img: 'city.jpg', alt: 'The City', label: 'Quiet. Not for long.', title: 'The City' },
-  { img: 'zero-talking.jpg', alt: 'Zero Talking', label: 'House rule', title: 'Zero Talking' },
-  { img: 'getaway.jpg', alt: 'The Getaway Laptop', label: 'Mission 01', title: 'The Getaway Laptop' },
-  { img: 'winners.jpg', alt: 'Round 1 Winners', label: 'Fastest crew wins', title: 'Round 1 Winners' },
-  { img: 'busted.jpg', alt: 'Busted', label: 'Three shots and you are out', title: 'Busted' },
-  { img: 'stakeout.jpg', alt: 'The Stakeout', label: 'Mission 02', title: 'The Stakeout' },
-  { img: 'shush.jpg', alt: 'Classified', label: 'Mission 03', title: 'Classified' },
-  { img: 'title.jpg', alt: 'Drink. Derive. Code.', label: "DDC'26", title: 'Drink. Derive. Code.' },
-  { img: 'stall.jpg', alt: 'The ACM Stall', label: 'Find us on the day', title: 'The ACM Stall' },
+  { img: 'shush-real.jpg', alt: 'Shhh no talking', label: 'House rule', title: 'Silence is golden' },
+  { img: 'the-shots.jpg', alt: 'Pouring the shots', label: 'Heat penalty', title: 'The Shots' },
+  { img: 'the-pressure.jpg', alt: 'The pressure builds', label: 'Under pressure', title: 'The Pressure' },
+  { img: 'bottoms-up.jpg', alt: 'Taking the shot', label: 'Heat penalty', title: 'Bottoms Up' },
+  { img: 'crews-coding.jpg', alt: 'Crews coding together', label: 'In the zone', title: 'Crews Coding' },
+  { img: 'the-crowd.jpg', alt: 'The crowd at DDC', label: 'Full attendance', title: 'The Crowd' },
+  { img: 'full-house.jpg', alt: 'Full house at the venue', label: 'Packed house', title: 'Full House' },
+  { img: 'group-photo.jpg', alt: 'DDC group photo', label: 'The whole crew', title: 'Group Photo' },
+  { img: 'winning-crew.jpg', alt: 'Winning crew celebrates', label: 'Mission complete', title: 'Winning Crew' },
+  { img: 'the-venue.jpg', alt: 'The venue fills up', label: 'Settling in', title: 'The Venue' },
+  { img: 'crews-at-work.jpg', alt: 'Crews working on laptops', label: 'Heads down', title: 'Crews at Work' },
 ];
 
 export default function Home() {
@@ -63,7 +64,7 @@ export default function Home() {
             <img className="hero__glow" src="/assets/ddc-logo.svg" alt="" aria-hidden="true" />
             <img className="hero__roman" src="/assets/ddc-logo.svg" alt="Drink Derive Code III" />
           </div>
-          <Countdown target="2026-10-29T10:00:00+05:30" />
+          <Countdown target="2026-10-29T18:30:00+05:30" />
           <div className="actions">
             <a href="#join" className="btn btn--solid">Register your crew</a>
             <a href="#teaser" className="btn btn--ghost">
@@ -77,7 +78,7 @@ export default function Home() {
       <section className="details container" aria-label="Event details">
         <div className="details__grid">
           <div className="details__item"><span>Date</span><strong>29 Oct 2026</strong></div>
-          <div className="details__item"><span>Location</span><strong>[VENUE TBA]</strong></div>
+          <div className="details__item"><span>Location</span><strong>PLH 101</strong></div>
           <div className="details__item"><span>Crew size</span><strong>2 players</strong></div>
           <div className="details__item"><span>Missions</span><strong>3 rounds</strong></div>
         </div>
@@ -110,9 +111,9 @@ export default function Home() {
               <li>Fastest crew to solve every problem wins the mission</li>
             </ul>
             <div className="mission__rounds">
-              <a className="mission__btn" href="[ROUND 1 LINK]">1</a>
-              <a className="mission__btn" href="[ROUND 2 LINK]">2</a>
-              <a className="mission__btn" href="[ROUND 3 LINK]">3</a>
+              <a className="mission__btn" href="https://www.hackerrank.com/ddc-1">1</a>
+              <a className="mission__btn" href="https://www.hackerrank.com/ddc-2">2</a>
+              <a className="mission__btn" href="https://www.hackerrank.com/ddc-3">3</a>
             </div>
           </article>
           <article className="mission mission--orange">
@@ -124,7 +125,7 @@ export default function Home() {
               <li>No notes, no phones</li>
               <li>Most correct answers wins the mission</li>
             </ul>
-            <a className="mission__btn" href="[ROUND 2 LINK]">Round 2<svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h11M10 4l5 5-5 5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg></a>
+            <a className="mission__btn" href="https://forms.cloud.microsoft/r/ML4FskV9sC">Round 2<svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h11M10 4l5 5-5 5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg></a>
           </article>
           <article className="mission mission--teal">
             <div className="mission__top"><span className="mission__num">03</span><span className="mission__label">Mission</span></div>
@@ -150,6 +151,17 @@ export default function Home() {
             </div>
             <p className="heat__note">Shots are small and non-alcoholic. Tell us at registration if you can&rsquo;t have them and we&rsquo;ll give you a time penalty instead.</p>
           </div>
+        </div>
+      </section>
+
+      <section id="sponsors" className="section container">
+        <div className="section__head">
+          <p className="eyebrow">Our Sponsors</p>
+          <h2 className="h2">Backed by the best.</h2>
+        </div>
+        <div className="sponsors">
+          <img src="/assets/sponsors/burrito-bro.svg" alt="Burrito Bro" className="sponsor__logo" />
+          <img src="/assets/sponsors/renocred.svg" alt="Renocred" className="sponsor__logo" />
         </div>
       </section>
 
@@ -183,7 +195,7 @@ export default function Home() {
           <p className="eyebrow">Join the crew</p>
           <h2 className="h2 h2--xl">Find a partner.<br /><span className="accent">Let the code do the talking.</span></h2>
           <p>Registrations open soon. Teams of two, open to all Bennett students.</p>
-          <a href="[REGISTRATION LINK]" className="btn btn--solid">Register now</a>
+          <a href="https://luma.com/i5flqtiv" className="btn btn--solid">Register now</a>
           <p className="join__devs">Developed by <strong>Abdul Sameer</strong>, <strong>Priyanshu Saxena</strong> &amp; <strong>Ayan Bhoumick</strong></p>
         </div>
       </section>
@@ -194,7 +206,7 @@ export default function Home() {
             <img src="/assets/acm-bennett-logo.png" alt="ACM Bennett" />
             <span>DDC 2026 &middot; ACM Student Chapter, Bennett University, Greater Noida</span>
           </div>
-          <span>Contact: [CONTACT EMAIL]</span>
+          <span>Contact: <a href="mailto:acm@bennett.edu.in">acm@bennett.edu.in</a></span>
         </div>
       </footer>
     </>

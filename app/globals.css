@@ -613,8 +613,8 @@ body:not(.intro-open) .hero__glow {
 }
 
 .details__item strong {
-  font-family: var(--display);
-  font-weight: 400;
+  font-family: var(--text);
+  font-weight: 700;
   font-size: 32px;
 }
 
@@ -657,8 +657,8 @@ body:not(.intro-open) .hero__glow {
 
 .h2 {
   margin: 0;
-  font-family: var(--display);
-  font-weight: 400;
+  font-family: var(--text);
+  font-weight: 700;
   font-size: clamp(44px, 6vw, 72px);
   line-height: 1;
   text-transform: uppercase;
@@ -721,7 +721,8 @@ body:not(.intro-open) .hero__glow {
 }
 
 .mission__num {
-  font-family: var(--display);
+  font-family: var(--text);
+  font-weight: 700;
   font-size: 64px;
   line-height: 1;
   color: var(--c);
@@ -736,8 +737,8 @@ body:not(.intro-open) .hero__glow {
 
 .mission__title {
   margin: 0;
-  font-family: var(--display);
-  font-weight: 400;
+  font-family: var(--text);
+  font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
 }
@@ -806,7 +807,7 @@ body:not(.intro-open) .hero__glow {
   margin-top: auto;
   padding: 16px;
   border: 1px dashed var(--line-2);
-  font-family: var(--display);
+  font-family: var(--text);
   font-size: 22px;
   letter-spacing: 3px;
   text-align: center;
@@ -854,8 +855,8 @@ body:not(.intro-open) .hero__glow {
 }
 
 .heat__box strong {
-  font-family: var(--display);
-  font-weight: 400;
+  font-family: var(--text);
+  font-weight: 700;
   font-size: 48px;
 }
 
@@ -900,6 +901,24 @@ body:not(.intro-open) .hero__glow {
   font-size: 14px;
   color: var(--mute);
 }
+
+/* ---------- sponsors ---------- */
+#sponsors { padding-top: 40px; padding-bottom: 20px; }
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.sponsor__logo {
+  height: clamp(150px, 20vw, 280px);
+  width: auto;
+  opacity: .85;
+  transition: opacity .3s;
+}
+.sponsor__logo:hover { opacity: 1; }
 
 /* ---------- gallery: endless drift, pauses on hover, hovered card grows ---------- */
 .gallery {
@@ -1011,8 +1030,8 @@ body:not(.intro-open) .hero__glow {
 }
 
 .gcard figcaption strong {
-  font-family: var(--display);
-  font-weight: 400;
+  font-family: var(--text);
+  font-weight: 700;
   font-size: clamp(22px, 2vw, 28px);
   line-height: 1.05;
   text-transform: uppercase;
@@ -1022,7 +1041,7 @@ body:not(.intro-open) .hero__glow {
 .gcard:hover {
   transform: scale(1.14);
   z-index: 5;
-  box-shadow: 0 0 0 2px var(--pink), 0 0 40px rgba(255, 62, 138, .5), 0 30px 60px rgba(0, 0, 0, .7);
+  box-shadow: 0 0 40px rgba(255, 62, 138, .5), 0 30px 60px rgba(0, 0, 0, .7);
 }
 
 .gcard:hover img {
